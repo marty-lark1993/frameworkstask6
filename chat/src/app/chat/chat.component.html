@@ -1,0 +1,21 @@
+<div class="chat-container">
+    <h2>Chat Room</h2>
+  
+    <!-- Chat Messages Display -->
+    <ul>
+      <li *ngFor="let message of messages">{{ message }}</li>
+    </ul>
+  
+    <!-- Chat Input Form -->
+    <form (submit)="sendMessage()">
+      <input
+        type="text"
+        [(ngModel)]="messageContent"
+        placeholder="Enter your message"
+        name="message"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
